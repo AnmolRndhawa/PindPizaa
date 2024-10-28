@@ -36,22 +36,22 @@ function openMenu(){
 
     const carouselArray =[
         {
-        image:"images/banner/SpicyB.webp",
+        image:"src/images/banner/SpicyB.webp",
         title:"Fast",
         link:"test.html"
     },
         {
-        image:"images/banner/SoupB.webp",
+        image:"src/images/banner/SoupB.webp",
         title:"Soup",
         link:"test.html"
     },
         {
-        image:"images/banner/DrinksB.webp",
+        image:"src/images/banner/DrinksB.webp",
         title:"Drinks",
         link:"test.html"
     },
         {
-        image:"images/banner/HealtyB.webp",
+        image:"src/images/banner/HealtyB.webp",
         title:"All Items",
         link:"test.html"
     }
