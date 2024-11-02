@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js}',
-    './**/*.{html,js}'
+    './index.html'
   ],
   theme: {
-    extend: {
+    extend: {   boxShadow: {
+      'inner-deep': 'inset 0 4px 8px rgba(0, 0, 0, 0.3)', // Customize shadow
+    },
       fontFamily:{
       
           'PopinsStyle':['Poppins','sans-serif'],
-          'InKutStyle' : ['Inknut Antiqua', 'serif']
+          'InKutStyle' : ['Inknut Antiqua', 'serif'],
+          'coffeeItallic':['coffeeItallic','serif'],
         
       },
     width:{

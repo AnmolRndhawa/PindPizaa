@@ -36,24 +36,16 @@ function openMenu(){
 
     const carouselArray =[
         {
-        image:"src/images/banner/SpicyB.webp",
-        title:"Fast",
-        link:"test.html"
+        title:"Popular",
+        tag:"popular"
     },
         {
-        image:"src/images/banner/SoupB.webp",
-        title:"Soup",
-        link:"test.html"
+        title:"New",
+        tag:"new"
     },
         {
-        image:"src/images/banner/DrinksB.webp",
-        title:"Drinks",
-        link:"test.html"
-    },
-        {
-        image:"src/images/banner/HealtyB.webp",
-        title:"All Items",
-        link:"test.html"
+        title:"Feature",
+        tag:"featuring"
     }
 ]
  let htmlGenerator="";
@@ -62,10 +54,9 @@ function openMenu(){
  carouselArray.forEach((item)=>{
      
      htmlGenerator += ` 
-     <a href="${item.link}" class=" min-h-36 bg-black carouselItems relative flex flex-col rounded-2xl w-[calc(100vw/3.8)] md:w-[calc(100vw/8)] snap-start">
-     <img src="${item.image}" alt="img" loading="lazy">
-     <p class="text-[#252525] bg-white absolute pl-4 pr-1">${item.title}</p>
-     </a>
+     <div data-tag-name = "${item.tag}" class="carouselItems min-h-max relative flex flex-col rounded-2xl cursor-pointer w-max snap-start hover:bg-black">
+     <p class="text-black font-PopinsStyle font-normal p-2 md:text-lg lg:text-xl hover:text-white ">${item.title}</p>
+     </div>
         `
         
      
@@ -90,37 +81,67 @@ function openMenu(){
     });
     // buttons
 
-    //showMy products
-    //showMy products
 
-    let showMyProducts = document.querySelectorAll('.showMyProducts');
+
+  //showMy products
+  //showMy products
+  let showMyProducts = document.querySelectorAll('.showMyProducts');
+
+  function defaultProducts(){
     showMyProducts.forEach((item)=>{
-       let productType= item.dataset.productType;
-       let tempArray = productLog.filter(filterItem => filterItem.description.includes(productType));
-       console.log(tempArray);
-       let tempHtml = displayProductsFunction(tempArray);
+        let productType= item.dataset.productType;
+        let tempArray = productLog.filter(filterItem => filterItem.description.includes(productType));
+        let tempHtml = displayProductsFunction(tempArray);
+        item.innerHTML = tempHtml;
+     });
 
-       item.innerHTML = tempHtml;
-    });
+  };
+  defaultProducts();
+
+    //tags products
+    //tags products
+    
+    document.querySelectorAll('.carouselItems').forEach((carouselItem)=>{
+        carouselItem.addEventListener("click",()=>{
+         showMyProducts.forEach((item)=>{
+
+                item.dataset.productType = carouselItem.dataset.tagName;
+
+            });
+
+             //showMy products
+             //showMy products
+            showMyProducts.forEach((item)=>{
+                   let productType= item.dataset.productType;
+                   let tempArray = productLog.filter(filterItem => filterItem.description.toLowerCase().includes(productType));
+                   let tempHtml = displayProductsFunction(tempArray);
+                   item.innerHTML = tempHtml;
+                });
+              
+        });// click event ends here
+    })
+   
     
     function displayProductsFunction(tempArray){
        let tempHtml='';
-       tempArray.forEach((item)=>{
-         tempHtml += `<div class="productClass shadow-md grid grid-cols-1 grid-rows-[60%_40%] bg-white border-2 relative min-h-64 bg-[url()] bg-cover overflow-hidden rounded-xl ">
-                <img class="row-start-1 row-end-1 h-full w-full object-cover" src="${item.image}" alt="img" loading="lazy">
-                <div class="productDetailsDiv row-start-2 row-end-2 flex flex-col justify-between">
-
-                <div class="extraDetailsDiv px-2">
-                <span class="text-${item.color} font-PopinsStyle font-bold text-wrap  md:text-2xl">${item.name}</span> 
-                <span  class="text-${item.color} text-gray-500 block font-PopinsStyle font-bold text-wrap text-[0.5rem] md:text-[0.6rem]">${item.description}</span> 
-
-                </div>
-                <button data-product-name="${item.id}" class="border-t-2 w-full text-black px-4 py-1 mb-1 mt-auto cursor-pointer md:px-10">Add To Cart - <span class=" block md:inline-block"> ₹ ${(item.price).toLocaleString()}</span></button>
-              </div>
-            </div>`
-            
- 
-        });
+       if(tempArray){
+           tempArray.forEach((item)=>{
+               tempHtml += `<div class="productClass shadow-md lg:shadow-none grid grid-cols-1 grid-rows-[50%_50%] place-items-cente bg-${item.color} border-2 lg:border-none relative min-h-full bg-[url()] bg-cover overflow-hidden rounded-xl">
+               <img class="row-start-1 row-end-1 h-[70%] md:min-h-full w-50 object-center m-auto" src="${item.image}" alt="img" loading="lazy">
+               <div class="productDetailsDiv row-start-2 row-end-2 flex flex-col justify-between">
+               
+               <div class="extraDetailsDiv px-4 flex flex-col gap-4 items-center overflow-x-scroll md:overflow-x-hidden">
+               <span class=" font-PopinsStyle font-bold text-wrap  md:text-2xl">${item.name}</span> 
+               <span  class=" text-gray-500 block font-PopinsStyle font-bold text-wrap text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] ">${item.description}</span> 
+               
+               </div>
+               <button data-product-name="${item.id}" class="border-t-2 lg:border-b-2 border-b-0 w-full text-black lg:hover:bg-black lg:hover:text-white  px-4 py-1 mb-1 mt-auto cursor-pointer md:px-10">Order - <span class=" block md:inline-block"> ₹ ${(item.price).toLocaleString()}</span></button>
+               </div>
+               </div>`
+               
+               
+            });
+        }
         return tempHtml;
     }
 
@@ -162,4 +183,7 @@ function openMenu(){
 
         });
     })
+    
     //background blur hover on headerNavClass
+
+

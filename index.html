@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SENG/Home</title>
     <link rel="stylesheet" href="src/output.css">
     <style>
         #searchBar input[type="search"]::-webkit-search-cancel-button{
@@ -90,8 +90,10 @@
                  
                 <!--// SubMenus--></div>
         </div>
-        <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">Pind Pizza</div>
-        <div class="icon mr-0 bg-orange-700  h-8 w-8 rounded-3xl md:hidden"></div>
+        <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">SENG SHOP</div>
+        <div class="icon mr-0 bg-orange-700/50 h-8 w-8 rounded-3xl md:hidden">
+            <img  src="src/images/icons/cart-large-minimalistic-svgrepo-com.svg" type="svg" alt="Img">
+        </div>
 
 
     </nav>
@@ -106,8 +108,10 @@
                 src="src/images/icons/cross-svgrepo-com.svg" alt="">
             </div>
             
-            <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">Pind Pizza</div>
-            <div class="icon mr-0 bg-orange-700  h-8 w-8 rounded-3xl"></div>
+            <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">SENG SHOP</div>
+            <div class="icon mr-0 bg-orange-700/50  h-8 w-8 rounded-3xl">
+                <img  src="src/images/icons/cart-large-minimalistic-svgrepo-com.svg" type="svg" alt="Img">
+            </div>
     
     
         </nav>
@@ -131,50 +135,45 @@
   
         <!-- searchBar -->
         <!-- searchBar -->
-        <div id="searchBar" 
-        class=" mt-16 min-h-16 flex items-center justify-center">
-        
-        <input class=" w-f px-8 py-2 md:px-10 md:py-4 text-center rounded-3xl border-2 focus:outline-none " type="search" placeholder="Search..">
+
+         <div class="searchbarWrapper relative bg-[#94b285] mt-16 mb-4 mx-4 md:mx-16 h-[25svh] flex items-end justify-center rounded-3xl">
+            <p class="absolute inset-0 mt-4 text-center text-3xl md:text-6xl font-coffeeItallic">SENG SHop</p>
+            <div id="searchBar" 
+        class="  min-h-16 flex items-center justify-center">
+        <input class=" w-f px-8 py-2 md:px-10 md:py-4 text-center rounded-3xl border-2 focus:outline-none z-10 " type="search" placeholder="Search..">
         
     </div>
+    
+</div>
     <!-- searchBar -->
     <!-- searchBar -->
 
-    <!-- Categories  -->
-    <!-- Categories  -->
-     <section class="categoriesSec  flex flex-col gap-y-2 md:gap-y-4 md:px-8 overflow-hidden ">
-         <span class="font-PopinsStyle text-lg pl-4">Categories</span>
+    <!-- Categories Options  -->
+    <!-- Categories Options  -->
+     <section class="categoriesSec flex flex-col gap-y-2 md:gap-y-4 md:px-8 overflow-hidden px-4">
+         <span class="font-PopinsStyle text-lg">Categories</span>
 
-         <div class="carousel flex justify-start w-screen gap-x-4 overflow-x-scroll scroll-smooth snap-mandatory pl-4 md:pl-8 md:overflow-hidden"></div>
-         <div class="buttonsForCarousel flex gap-x-4 items-center px-4 text-start">
-
-             <p class="font-PopinsStyle font-semibold text-sm md:text-xl">explore more <span class="block md:inline-block md:px-4 text-emerald-600 text-lg md:text-3xl">delicious food</span> options!</p>
-             <button data-button-name="leftBtn" class=" carouselButton px-4 py-2 rounded-2xl text-white text-xl font-bold bg-black text-center ml-4 md:ml-40 md:hidden"><</button>
-             <button data-button-name="rightBtn" class=" carouselButton px-4 py-4 rounded-2xl text-xl font-bold text-black underline underline-offset-8 bg-white/30 md:hidden"> Next ></button>
-         </div>
+         <div class="carousel flex justify-start w-max border-2 rounded-3xl gap-x-4 md:gap-x-8 lg:gap-x-20 overflow-x-scroll scroll-smooth snap-mandatory md:overflow-hidden"></div>
+        
         </section>
         
-
-    <!-- Categories  -->
-    <!-- Categories  -->
-
-    <!--Popular Items-->
-    <section id="fanFavSec" class="fanFavSec flex flex-col gap-2 my-8 px-4 md:px-8">
-        <span class="font-PopinsStyle text-lg pl-4">Popular Picks You’ll Love!</span>
-        <div data-product-type="popular" class="showMyProducts grid gap-4 grid-cols-1 grid-rows-[300px] auto-rows-[300px] md:grid-cols-2 lg:grid-cols-3 md:grid-rows-[300px] md:auto-rows-[300px] grid-flow-row">
-            <div class="productClass relative min-h-64 bg-[url('src/images/banner/SpicyB.webp')] bg-cover overflow-hidden rounded-xl ">
-                <span class="text-white absolute inset-0 text-center font-PopinsStyle font-bold text-wrap mt-8 md:text-2xl">Coffie Label</span>
-               
-                <button class="bg-black absolute bottom-0 inset-x-0 text-white px-4 py-2 mb-2 mt-auto cursor-pointer md:px-10">Add To Cart</button>
-              
+        
+        <!-- Categories  -->
+        <!-- Categories  -->
+        
+        <!--Popular Items-->
+        <section id="fanFavSec" class="fanFavSec flex flex-col gap-2 my-8 px-4 md:px-8 min-h-[80svh]">
+            <span class="font-PopinsStyle text-lg pl-4">Popular Picks You’ll Love!</span>
+            <div data-product-type="popular" class="showMyProducts h-fit grid gap-4 grid-cols-2 grid-rows-[400px] auto-rows-[400px] md:grid-cols-3 lg:grid-cols-4 md:grid-rows-[80svh] md:auto-rows-[80svh] grid-flow-row">
+                
+                
+                
+                
             </div>
-
-
-
-        </div>
-    </section>
-    <!--Popular Items-->
-
+        </section>
+        <!--Popular Items-->
+        
+        <p class="font-PopinsStyle font-semibold text-sm md:text-xl">explore more <span class="block md:inline-block md:px-4 text-emerald-600 text-lg md:text-3xl">delicious food</span> options!</p>
 
 
     </main>

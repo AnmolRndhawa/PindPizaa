@@ -15,3 +15,13 @@
     @apply h-full w-full object-contain bg-center
 
 }
+
+@font-face {
+    font-family:'coffeeItallic';
+    src: url('addOns/CoffeeHealingItalic-RpP6o.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* npx tailwindcss -i ./src/style.css -o ./src/output.css --watch */
