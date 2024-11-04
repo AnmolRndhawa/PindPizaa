@@ -92,4 +92,12 @@ function displayCart(){
     })
     
     document.querySelector('.cartItemsDiv').innerHTML = tempHtml;
+
+    // dispkaying total amount and totol products
+
+   const totalPrice = cartProducts.reduce((accumulator, item)=>{
+         return accumulator + item.totalPrice;
+   },0);
+
+   document.querySelector('.cartTotalAmount').innerText = totalPrice.toLocaleString();
 }
