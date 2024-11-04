@@ -14,6 +14,9 @@
         .visiblespan::after{
           opacity: 1;
         }
+        .cartPannel{
+            transition:0.5s ease-out;
+        }
       
         
     </style>
@@ -91,7 +94,7 @@
                 <!--// SubMenus--></div>
         </div>
         <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">SENG SHOP</div>
-        <div class="icon mr-0 bg-orange-700/50 h-8 w-8 rounded-3xl md:hidden">
+        <div data-action="open" class="cartButton icon mr-0 bg-orange-700/50 h-8 w-8 rounded-3xl md:hidden">
             <img  src="src/images/icons/cart-large-minimalistic-svgrepo-com.svg" type="svg" alt="Img">
         </div>
 
@@ -109,7 +112,7 @@
             </div>
             
             <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">SENG SHOP</div>
-            <div class="icon mr-0 bg-orange-700/50  h-8 w-8 rounded-3xl">
+            <div data-action="open" class="cartButton icon mr-0 bg-orange-700/50  h-8 w-8 rounded-3xl">
                 <img  src="src/images/icons/cart-large-minimalistic-svgrepo-com.svg" type="svg" alt="Img">
             </div>
     
@@ -129,6 +132,24 @@
   
 </header>
 
+<div class="cartPannel fixed h-full w-[80%]  backdrop-blur-sm bg-white/90 z-[999] top-0 right-[-100%] p-4 overflow-x-scroll">
+     <!-- cart header  -->
+    <div class="cartHeader flex gap-8 items-center">
+        <div data-action="open" class="cartButton icon mr-0 bg-white  h-8 w-8 rounded-3xl">
+            <img  src="src/images/icons/cross-svgrepo-com.svg" type="svg" alt="Img">
+           
+        </div>
+
+        <span class="text-black font-PopinsStyle ">Your Cart</span>
+    </div>
+     
+    <!-- cart body  -->
+  
+    <div class="cartItemsDiv flex flex-col gap-y-4 px-4 py-8"></div>
+
+
+
+</div>
 
     
     <main data-visibility="true" class="flex flex-col overflow-clip">
@@ -219,5 +240,6 @@
 
     <script src="src/tailwindManage.js"></script> 
     <script type="module" src="src/01-index.js"></script> 
+    <script type="module" src="src/02-cartScript.js"></script> 
 </body>
 </html>

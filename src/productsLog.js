@@ -1,5 +1,5 @@
-export const productLog =[
-    
+
+ 
       /*  
          description: `
          <span class="CompanyOnProduct lg:mt-8 mt-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent ">
@@ -16,6 +16,9 @@ export const productLog =[
           #popular
           </span> ` , */
         //
+        
+export const productLog =[
+   
         {
             id: "pd-01",
             name: 'Beats Studio Buds',
@@ -123,7 +126,7 @@ and convenience, whether you're working, traveling, or relaxing with your favori
             
             </span>
    
-         <span class="tagsOnProduct block lg:mt-8 mt-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+         <span class="tagsOnProduct hidden lg:mt-8 mt-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
            #new #popular #watch #smaertwatch
              </span> `,
 

@@ -135,7 +135,7 @@ function openMenu(){
                <span  class=" text-gray-500 block font-PopinsStyle font-bold text-wrap text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] ">${item.description}</span> 
                
                </div>
-               <button data-product-name="${item.id}" class="border-t-2 lg:border-b-2 border-b-0 w-full text-black lg:hover:bg-black lg:hover:text-white  px-4 py-1 mb-1 mt-auto cursor-pointer md:px-10">Order - <span class=" block md:inline-block"> ₹ ${(item.price).toLocaleString()}</span></button>
+               <button data-product-id="${item.id}" class="orderButton border-t-2 lg:border-b-2 border-b-0 w-full text-black lg:hover:bg-black lg:hover:text-white  px-4 py-1 mb-1 mt-auto cursor-pointer md:px-10">Order - <span class=" block md:inline-block"> ₹ ${(item.price).toLocaleString()}</span></button>
                </div>
                </div>`
                
