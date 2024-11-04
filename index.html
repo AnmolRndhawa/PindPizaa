@@ -132,7 +132,7 @@
   
 </header>
 
-<div class="cartPannel fixed h-full w-[80%]  backdrop-blur-sm bg-white/90 z-[999] top-0 right-[-100%] p-4 overflow-x-scroll">
+<div class="cartPannel fixed h-screen w-[80%]  backdrop-blur-sm bg-white/90 z-[999] top-0 right[-100%] p-4">
      <!-- cart header  -->
     <div class="cartHeader flex gap-8 items-center">
         <div data-action="open" class="cartButton icon mr-0 bg-white  h-8 w-8 rounded-3xl">
@@ -145,9 +145,31 @@
      
     <!-- cart body  -->
   
-    <div class="cartItemsDiv flex flex-col gap-y-4 px-4 py-8"></div>
+    <div class="relative h-[75%] px-4 py-8 overflow-x-scroll">
+
+        <div class="cartItemsDiv flex flex-col gap-y-4"></div>
+    </div>
+
+ <!-- card bottom  -->
+<div class="cartBottom grid grid-rows-2 grid-cols-2 gap-y-4 px-2 py-4">
+
+    <div class="font-PopinsStyle font-light text-sm row-span-1 col-span-1">
+        Total Amount : 
+        <span class="cartTotalAmount block text-sm text-center">9999</span>
+        
+    </div>
+    <div class="font-PopinsStyle font-light text-sm row-span-1 col-span-1">
+        Total Products : 
+        <span class="cartTotalAmount block text-sm text-center">9999</span>
+        
+    </div>
+
+    <button class="row-span-1 col-span-2 border-2 rounded-xl text-white bg-black">PROCEED</button>
 
 
+
+
+</div> 
 
 </div>
 
