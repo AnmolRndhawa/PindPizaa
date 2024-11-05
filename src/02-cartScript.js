@@ -16,7 +16,7 @@ document.querySelectorAll('.cartButton').forEach((buttonItem)=>{
 
 //creating addToCart products Array
 
-const cartProducts =[];
+let cartProducts =[];
 //order button eventListener 
 document.querySelector('.showMyProducts').addEventListener("click",(event)=>{
 
@@ -54,6 +54,8 @@ document.querySelector('.showMyProducts').addEventListener("click",(event)=>{
             
             
             displayCart();
+            cartIconAnimaion();
+            notiFyMeFunction();
         }
  });
 
@@ -74,6 +76,12 @@ function findMyProduct(productIdParam){
  return null
 };
 
+
+// cart products structre
+// cart products structre
+// cart products structre
+
+
 console.log(cartProducts);
 // adding cartProducts on cartItemsDiv
 // adding cartProducts on cartItemsDiv
@@ -82,12 +90,20 @@ function displayCart(){
     let tempHtml ="";
     
     cartProducts.forEach((item)=>{
-        tempHtml +=`<div class="flex gap-x-2 px-4 py-8 overflow-y-scroll">
-        <div class="h-5 w-12">
-        <img class="min-h-full w-full" src="${item.image}">
+        tempHtml +=`<div class="flex items-center gap-x-4 overflow-hidden">
+        
+        <div class="h-10 w-12 relative">
+        <img class="object-center object-cover" src="${item.image}">
         </div>
-        <div class=""></div>
-        <p>${item.name}<span class="block"> quant: ${item.quantity}</span></p>
+
+        <div class="">
+        <p class="">${item.name}<span class="block"> Qty: ${item.quantity}</span></p>
+        </div>
+       
+         <div data-item-id="${item.id}" class="removeItemInCart h-[30px] w-[30px] flex items-center text-center opacity-[0.5] ml-auto cursor-pointer">
+          <img class="min-h-full w-full" src="src/images/icons/cross-svgrepo-com.svg" type="svg" alt="Img">
+         </div>
+        
         </div>`;
     })
     
@@ -99,5 +115,72 @@ function displayCart(){
          return accumulator + item.totalPrice;
    },0);
 
+   const totalPoducts = cartProducts.reduce((accumulator, item)=>{
+         return accumulator + item.quantity;
+   },0);
+
    document.querySelector('.cartTotalAmount').innerText = totalPrice.toLocaleString();
+   document.querySelector('.cartTotalProduct').innerText = totalPoducts.toLocaleString();
+}
+
+
+
+
+
+// removing item from add to cart function
+// removing item from add to cart function
+// removing item from add to cart function
+
+document.querySelectorAll('.cartItemsDiv').forEach((divItem)=>{
+    
+    divItem.addEventListener("click",(event)=>{
+        if(event.target.closest(".removeItemInCart")){
+            let targetItem = event.target.closest(".removeItemInCart");
+            let itemId = targetItem.dataset.itemId;
+            
+            if(itemId){
+                removeItemFromCart(itemId);
+            }else{
+                console.log("itemId not avai");
+
+            }
+            
+        };
+
+        displayCart();
+    });
+    
+    
+})
+function removeItemFromCart(idParam){
+    cartProducts = cartProducts.filter(productItem=> productItem.id !==idParam);
+
+}
+
+// extra functions 
+// extra functions 
+
+
+// cartIconAnimaion 
+
+function cartIconAnimaion(){
+const cartButton = document.querySelector('.cartButton');
+cartButton.classList.add("AnimateMe-gadient");
+
+setTimeout(()=>{
+    cartButton.classList.remove("AnimateMe-gadient");
+
+},1000);
+}
+
+//nofication notiFyMe
+
+function notiFyMeFunction(){
+    document.querySelector('.notiFyMe').classList.remove("hidden");
+    document.querySelector('.notiFyMe').classList.add("flex");
+    setTimeout(()=>{
+        document.querySelector('.notiFyMe').classList.remove("flex");
+        document.querySelector('.notiFyMe').classList.add("hidden");
+
+    },2000);
 }

@@ -18,15 +18,38 @@ module.exports = {
       'calc-100vw/4': { width: 'calc(100vw /4)'}
     },
   keyframes:{
-    Custom1:{
-      '0%':{transform:'translateY(-9rem)'},
-      '100%':{transform:'translateY(0rem)'},
-
+    gradientShine: {
+      '0%': {
+        background: 'linear-gradient(90deg, #8e44ad, #ff6f61)',
+        backgroundSize: '200% 100%',
+      },
+      '50%': {
+        background: 'linear-gradient(90deg, #ff6f61, #8e44ad)',
+        backgroundSize: '200% 100%',
+      },
+      '100%': {
+        background: 'linear-gradient(90deg, #8e44ad, #ff6f61)',
+        backgroundSize: '200% 100%',
+      },
     },
+
+
+    shine: {
+      '0%': {
+        opacity: '0.5',
+        transform: 'scale(1)',
+      },
+      '100%': {
+        opacity: '1',
+        transform: 'scale(1.05)',
+      },
+    },
+
   },
 
   animation:{
-    Custom1:'Custom1 1s ease-out forward',
+    gradientShine: 'gradientShine 3s ease-in-out infinite',
+        shine: 'shine 1s ease-in-out infinite alternate',
   },
 
 }},

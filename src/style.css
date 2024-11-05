@@ -23,5 +23,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
+.AnimateMe-gadient,.notiFyMe {
+    @apply
+    animate-gradientShine
+    animate-shine
+}
 /* npx tailwindcss -i ./src/style.css -o ./src/output.css --watch */

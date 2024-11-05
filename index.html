@@ -23,7 +23,7 @@
 </head>
 <body>
     <header class="z-100">
-        <nav class=" headerNavClass p-4 z-[999] fixed w-full flex items-center justify-between backdrop-blur-sm bg-white/30 md:bg-white">
+        <nav class=" headerNavClass p-4 z-[997] fixed w-full flex items-center justify-between backdrop-blur-sm bg-white/30 md:bg-white">
 
         
         <div class="menuForPhoneButton icon h-8 w-8 md:hidden">
@@ -131,10 +131,10 @@
             
   
 </header>
-
-<div class="cartPannel fixed h-full w-[80%] backdrop-blur-sm bg-white/90 z-[999] top-0 right-[-100%] p-4">
+<!-- // cart pannel  -->
+<div class="cartPannel fixed h-full w-[80%] backdrop-blur-sm bg-white/90 z-[998] top-0 right-[-100%] p-4">
      <!-- cart header  -->
-    <div class="cartHeader flex gap-8 items-center">
+    <div class="cartHeader flex gap-8 items-center border-b-2">
         <div data-action="open" class="cartButton icon mr-0 bg-white  h-8 w-8 rounded-3xl">
             <img  src="src/images/icons/cross-svgrepo-com.svg" type="svg" alt="Img">
            
@@ -144,14 +144,14 @@
     </div>
      
     <!-- cart body  -->
-  
     <div class="relative h-[75%] px-4 py-8 overflow-x-scroll">
+  
 
         <div class="cartItemsDiv flex flex-col gap-y-4"></div>
     </div>
 
  <!-- card bottom  -->
-<div class="cartBottom grid grid-rows-2 grid-cols-2 gap-y-4 px-2 py-4">
+<div class="cartBottom grid grid-rows-2 grid-cols-2 gap-y-4 px-2 py-4 border-t-2">
 
     <div class="font-PopinsStyle font-light text-sm row-span-1 col-span-1">
         Total Amount : 
@@ -173,6 +173,18 @@
 
 </div>
 
+<!-- //cart massages  -->
+
+<div class="notiFyMe fixed hidden gap-x-4 h-11 w-[80%] z-[999] top-[86%] left-[10%] border-[2px] rounded-xl bg-white shadow-green-500/30 shadow-xl overflow-hidden">
+    <div class=" relitive h-full w-12 bg-green-400 overflow-hidden content-center">
+        <img class="h-[60%] w-full" src="src/images/icons/check-double.svg" type="svg" alt="">
+    </div>
+    <div class="font-bold font-PopinsStyle text-sm content-center">Item <span class="massageAction">Added!</span></div>
+</div>
+
+
+<!-- // main  -->
+<!-- // main  -->
     
     <main data-visibility="true" class="flex flex-col overflow-clip">
   
