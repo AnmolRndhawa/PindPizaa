@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="output.css">
+      
+<style>
+    /* .mainContent{
+        height: 80svh;
+        overflow-y:scroll
+    } */
+</style>
+
+</head>
+
+<body class="bg-gray-100 p-4 lg:p-6">
+
+    <main class="flex flex-col lg:flex-row gap-y-2 lg:gap-x-4">
+        <!-- 
+    // traking pannel 
+    // traking pannel 
+    // traking pannel  -->
+
+       <div class="bg-white py-6 lg:max-w-[230px] px-4 lg:p-6 lg:ml-6 lg:shadow-md rounded-lg lg:grid lg:grid-cols-[10%_10%-1fr] lg:grid-rows-1 lg:gap-x-8">
+
+        <div class="progressBar hidden lg:col-start-1 lg:inline-block bg-gray-300 min-w-[0.4rem] h-[10%] rounded-xl">
+            .
+
+        </div>
+
+        <ul class="lg:w-full lg:col-start-3 h-full flex lg:flex-col gap-x-8 justify-between">
+            <li id="address-step" class="flex items-center text-black font-PopinsStyle text-sm ">
+                Address <span class="hidden lg:inline-block ml-2">Details</span>
+            </li>
+            <li id="payment-step" class="flex items-center text-gray-400  font-PopinsStyle text-sm">
+                Payment <span class="hidden lg:inline-block ml-2">Method</span>
+            </li>
+            <li id="review-step" class="flex items-center  text-gray-400  font-PopinsStyle text-sm">
+                Order <span class="hidden lg:inline-block ml-2">Summary</span>
+            </li>
+
+        </ul>
+
+       </div>
+
+    <!-- 
+    // traking pannel ends 
+    // traking pannel ends
+    // traking pannel  -->
+
+    <div class="mainContent max-w-[60rem] h-[82svh] lg:h-[90svh] overflow-y-scroll mx-auto lg:mr-4 lg:ml-auto bg-white shadow-md rounded-lg p-4 lg:p-8 flex flex-col gap-y-24">
+
+        <!-- Section 1: Address Details -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">1. Shipping Address</h2>
+            <article class="text-[0.6rem] lg:text-xs">By proceeding, I confirm that the address provided is my legal address <Span class="">I acknowledge and agree to comply with all <a class="font-bold underline cursor-pointer" href="#">Terms</a> and Conditions</Span></article>
+            <form action="#"
+            class="space-y-4 mt-4 ">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="col-span-2">
+                        <input type="text" id="fullName" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" placeholder="Enter full name" required maxlength="15">
+                    </div>
+                    <div class="col-span-2">
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" placeholder="Enter email address" required maxlength="15">
+                    </div>
+                    <div>
+                        <input type="text" id="state" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" placeholder="Enter state" required maxlength="15">
+                    </div>
+                    <div>
+                        <input type="text" id="city" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" placeholder="Enter city" required maxlength="15">
+                    </div>
+                    <div>
+                        <label for="areaCode" class="block text-sm font-medium text-gray-600">Area Code</label>
+                        <input type="text" id="areaCode" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" placeholder="Eg: 143103" required maxlength="8">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="address" class="block text-sm font-medium text-gray-600">Full Address</label>
+                        <textarea id="address" rows="3" class="w-full max-h-[10svh] p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" placeholder="Enter full address" required maxlength="30"></textarea>
+                    </div>
+                      <div class="buttonSectionInForm w-100 font-PopinsStyle row-start-6 col-start-1 col-end-3 flex gap-x-4 justify-start items-center">
+                          <button type="submit" class="py-2 px-8 sm:px-14 sm:py-4 bg-black rounded-md text-white cursor-pointer">NEXT</button>
+                          <span class="w-100 text-black text-[0.8rem] md:text-base">Agree and continue</span>
+                      </div>
+
+                </div>
+            </form>
+        </section>
+
+        <!-- Section 2: Payment Method -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">2. Payment Method</h2>
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <input type="radio" id="creditDebit" name="paymentMethod" class="h-4 w-4 text-blborder-black focus:ring-blborder-black border-gray-300">
+                    <label for="creditDebit" class="ml-3 text-sm font-medium text-gray-700">Credit / Debit Card</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="freeOption" name="paymentMethod" class="h-4 w-4 text-blborder-black focus:ring-blborder-black border-gray-300">
+                    <label for="freeOption" class="ml-3 text-sm font-medium text-gray-700">Free Option Payment</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Placeholder -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">3. [Your Custom Section]</h2>
+            <p class="text-gray-600">You can add your custom section here.</p>
+        </section>
+
+        <!-- Submit Button -->
+        <div class="mt-8">
+            <button class="w-full py-3 bg-blborder-black text-white font-semibold rounded-lg shadow-md hover:bg-blborder-black focus:outline-none focus:ring-2 focus:ring-blborder-black focus:ring-offset-2">
+                Place Order
+            </button>
+        </div>
+
+    </div>
+
+
+
+</main> 
+
+<script type="module" src="03-cheakoutPage.js"></script>
+</body>
+</html>

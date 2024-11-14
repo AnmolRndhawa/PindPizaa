@@ -33,7 +33,7 @@
         
         <!-- navLinks for desktop  -->
         <!-- navLinks for desktop  -->
-        <div class="hidden absolute inset-y-0 inset-x-0 m-auto md:flex justify-center items-center gap-x-12">
+        <div class="hidden absolute inset-y-0 inset-x-12 m-auto md:flex justify-center items-center gap-x-12">
             <div><a class="font-PopinsStyle" data-name="Home" href="#"><span>Home</span></a></div>
             <div class="group"><a class="js-headerLinks font-PopinsStyle relative drop-shadow-md" data-name="Shop" href="#"><span>Shop</span></a>
     <!--// SubMenu 1-->
@@ -94,7 +94,7 @@
                 <!--// SubMenus--></div>
         </div>
         <div class="logo font-InKutStyle font-semibold text-lg select-none ml-auto mr-4 md:shrink-0">SENG SHOP</div>
-        <div data-action="open" class="cartButton icon mr-0 bg-orange-700/50 h-8 w-8 rounded-3xl md:hidden">
+        <div data-action="open" class="cartButton icon mr-0 bg-orange-700/50 h-8 w-8 rounded-3xl cursor-pointer ">
             <img  src="src/images/icons/cart-large-minimalistic-svgrepo-com.svg" type="svg" alt="Img">
         </div>
 
@@ -132,7 +132,7 @@
   
 </header>
 <!-- // cart pannel  -->
-<div class="cartPannel fixed h-full w-[80%] backdrop-blur-sm bg-white/90 z-[998] top-0 right-[-100%] p-4">
+<div class="cartPannel fixed h-full w-[80%] md:w-[30%] backdrop-blur-sm bg-white/90 z-[998] top-0 right-[-100%] p-4">
      <!-- cart header  -->
     <div class="cartHeader flex gap-8 items-center border-b-2">
         <div data-action="open" class="cartButton icon mr-0 bg-white  h-8 w-8 rounded-3xl">
@@ -140,14 +140,14 @@
            
         </div>
 
-        <span class="text-black font-PopinsStyle ">Your Cart</span>
+        <span class="text-black font-PopinsStyle ">Cart Preview</span>
     </div>
      
     <!-- cart body  -->
-    <div class="relative h-[75%] px-4 py-8 overflow-x-scroll">
+    <div class="relative h-[75%] px-4 py-8 overflow-y-scroll">
   
 
-        <div class="cartItemsDiv flex flex-col gap-y-4"></div>
+        <div class="cartItemsDiv flex flex-col gap-y-12"></div>
     </div>
 
  <!-- card bottom  -->
@@ -164,7 +164,7 @@
         
     </div>
 
-    <button class="row-span-1 col-span-2 border-2 rounded-xl text-white bg-black">PROCEED</button>
+    <button class="proceedButton row-span-1 col-span-2 border-2 rounded-xl text-white bg-black">PROCEED</button>
 
 
 
@@ -175,7 +175,7 @@
 
 <!-- //cart massages  -->
 
-<div class="notiFyMe fixed hidden gap-x-4 h-11 w-[80%] z-[999] top-[86%] left-[10%] border-[2px] rounded-xl bg-white shadow-green-500/30 shadow-xl overflow-hidden">
+<div class="notiFyMe fixed hidden gap-x-4 h-11 w-[80%] md:w-[30%] z-[999] top-[86%] left-[10%] md:left-[35%] border-[2px] rounded-xl bg-white shadow-green-500/30 shadow-xl overflow-hidden">
     <div class=" relitive h-full w-12 bg-green-400 overflow-hidden content-center">
         <img class="h-[60%] w-full" src="src/images/icons/check-double.svg" type="svg" alt="">
     </div>
